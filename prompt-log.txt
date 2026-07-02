@@ -1,0 +1,28 @@
+Prompts utilizados para la evaluación de Inventario Stock:
+
+1. "Ayúdame a definir una problemática para una app de inventario en React."
+   - Uso: definir cliente, contexto, necesidad y objetivo de la solución.
+   - Decisión: elegir una pequeña tienda de productos tecnológicos como cliente ficticio.
+
+2. "Explícame cómo organizar componentes en React + Vite."
+   - Uso: estructurar el proyecto en componentes modulares.
+   - Decisión: crear `Header`, `ProductList`, `ProductCard` y `ProductForm`.
+
+3. "Dame recomendaciones para usar useState en un filtro de productos."
+   - Uso: manejar búsqueda y categoría por estado.
+   - Decisión: usar `useState` para `busqueda`, `categoriaFiltro` y `productos`.
+
+4. "Haz la app más interactiva y dinámica con búsqueda, filtros y acciones." 
+   - Uso: mejorar la UI y agregar interacciones.
+   - Decisión: añadir botones para ajustar stock, eliminar productos y mostrar métricas de inventario.
+
+5. "Añade persistencia local a la aplicación y planifica la integración externa." 
+   - Uso: preparar la aplicación para crecimiento futuro.
+   - Decisión: implementar `localStorage` y documentar necesidades de integración externa.
+
+Ajustes realizados:
+- Se agregó persistencia local con `localStorage`.
+- Se implementó estado dinámico para búsquedas, filtros y datos de productos.
+- Se desarrolló un formulario funcional para agregar productos.
+- Se estructuró el proyecto con componentes reutilizables.
+- Se documentó el uso de IA y la planificación futura en `README.md`.
