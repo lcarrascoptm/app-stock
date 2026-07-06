@@ -67,28 +67,32 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header 
+        totalProductos={productos.length}
+        totalStock={totalItems}
+        valorInventario={valorInventario}
+      />
 
       <main className="container">
         <section className="hero-section">
           <div>
-            <h2>Inventario dinámico</h2>
+            <h2>🎯 Gestión inteligente</h2>
             <p>
-              Busca, filtra, actualiza stock y agrega productos nuevos de forma
-              interactiva.
+              Administra tu inventario de forma rápida y eficiente. Busca, filtra, 
+              actualiza stock y agrega productos en tiempo real.
             </p>
           </div>
           <div className="summary-cards">
             <div className="summary-card">
-              <span>Total productos</span>
+              <span>📦 Total productos</span>
               <strong>{productos.length}</strong>
             </div>
             <div className="summary-card">
-              <span>Unidades en stock</span>
+              <span>📊 Unidades en stock</span>
               <strong>{totalItems}</strong>
             </div>
             <div className="summary-card">
-              <span>Valor inventario</span>
+              <span>💵 Valor inventario</span>
               <strong>${valorInventario.toLocaleString()}</strong>
             </div>
           </div>
@@ -96,20 +100,28 @@ function App() {
 
         <section className="controls-grid">
           <div className="search-section">
-            <h2>Buscar productos</h2>
+            <h2>🔍 Buscar productos</h2>
             <input
               type="text"
               placeholder="Buscar por nombre..."
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
+              maxLength="50"
+              aria-label="Buscar productos por nombre"
             />
+            {busqueda && (
+              <p className="search-hint">
+                Se encontraron <strong>{productosFiltrados.length}</strong> resultados
+              </p>
+            )}
           </div>
 
           <div className="filter-section">
-            <h2>Filtrar por categoría</h2>
+            <h2>🏷️ Categorías</h2>
             <select
               value={categoriaFiltro}
               onChange={(e) => setCategoriaFiltro(e.target.value)}
+              aria-label="Filtrar productos por categoría"
             >
               {categorias.map((categoria) => (
                 <option key={categoria} value={categoria}>
@@ -133,3 +145,4 @@ function App() {
 }
 
 export default App;
+
