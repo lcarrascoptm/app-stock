@@ -8,7 +8,8 @@
       {
         "ignore": [
           "-moz-appearance",
-          "backdrop-filter"
+          "backdrop-filter",
+          "-webkit-overflow-scrolling"
         ]
       }
     ]

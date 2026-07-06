@@ -1412,7 +1412,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .history-table-container {
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    -webskit-overflow-scrolling: touch;
   }
 
   .history-stats {
